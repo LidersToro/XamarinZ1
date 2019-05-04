@@ -1,4 +1,5 @@
-﻿using System;
+﻿using app.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,8 +11,8 @@ namespace app
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new LoginPage();
+            // MainPage = new MainPage();
         }
 
         protected override void OnStart()

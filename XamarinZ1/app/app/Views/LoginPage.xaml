@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.Views.LoginPage"
+             >
+        <ContentPage.Content>
+                <ScrollView>
+                   <StackLayout Padding="10">
+                
+                       <Image Source="mipmap\icon"> </Image>
+                       <Grid>
+                           <Grid.ColumnDefinitions>
+                               <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+                                 <Label
+                                      Grid.Column="0"
+                                      Grid.Row="0"
+                                      Text="Email"
+                                      TextColor="Black">
+                                 </Label>
+                                 <Entry  
+                                     Grid.Column="1"
+                                     Grid.Row="0"
+                                     Placeholder="Ingrese su Correo" >
+                                 </Entry>
+                                 <Label
+                                     Grid.Column="0"
+                                     Grid.Row="1"
+                                     Text="Password"
+                                     TextColor="Black">
+                                 </Label>
+                                 <Entry  
+                               Grid.Column="1"
+                               Grid.Row="1"
+                               Placeholder="Ingrese su Clave" >
+                                 </Entry>
+                        </Grid>
+                         <ActivityIndicator IsRunning="False"></ActivityIndicator>
+                        <Button
+                           Text="Login"
+                            BackgroundColor="Black"
+                            >
+                         
+                         
+                     </Button>
+               
+            </StackLayout>
+                </ScrollView>
+    </ContentPage.Content>
+
+
+
+</ContentPage>
