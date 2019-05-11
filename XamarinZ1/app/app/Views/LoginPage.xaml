@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
              x:Class="app.Views.LoginPage"
              >
         <ContentPage.Content>
@@ -20,26 +21,35 @@
                                       TextColor="Black">
                                  </Label>
                                  <Entry  
-                                     Grid.Column="1"
-                                     Grid.Row="0"
+                                     Grid.Column="0"
+                                     Grid.Row="1"
+                                     Text="{Binding Email,Mode=TwoWay}"
                                      Placeholder="Ingrese su Correo" >
                                  </Entry>
                                  <Label
-                                     Grid.Column="0"
+                                     Grid.Column="1"
                                      Grid.Row="1"
                                      Text="Password"
+                                     
                                      TextColor="Black">
                                  </Label>
                                  <Entry  
                                Grid.Column="1"
-                               Grid.Row="1"
+                               Grid.Row="0"
+                               IsPassword="True"
+                               Text="{Binding Password,Mode=TwoWay}"
                                Placeholder="Ingrese su Clave" >
                                  </Entry>
                         </Grid>
-                         <ActivityIndicator IsRunning="False"></ActivityIndicator>
+                         <ActivityIndicator IsRunning="{Binding IsRunning}">
+                             
+                         </ActivityIndicator>
                         <Button
                            Text="Login"
+                           Command="{Binding LoginCommand,Mode=TwoWay}"
+                            IsEnabled="{Binding IsEnabled}"
                             BackgroundColor="Black"
+                            TextColor="White"
                             >
                          
                          
